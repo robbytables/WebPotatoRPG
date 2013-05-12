@@ -35,11 +35,10 @@ class Potato_Controller extends Base_Controller {
 		return View::make('potato.potato');
 	}
 
-        public function action_test()
+    public function action_test()
 	{
 		return "Hello Potato Person Latvia whatever!";
 	}
-
 
 	public function action_dbtest()
 	{
@@ -49,9 +48,9 @@ class Potato_Controller extends Base_Controller {
 
 	public function action_dbwrite()
 	{
-                $username = Input::get('_name');
+        $username = Input::get('_name');
 		$id = DB::table('users')->insert_get_id(array('username' => $username));
-                return Response::json(array('username' => $username, 'id' => $id));
+        return Response::json(array('username' => $username, 'id' => $id));
 	}
 
 }
