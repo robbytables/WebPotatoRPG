@@ -31,9 +31,10 @@ class Potato_Controller extends Base_Controller {
 
     public function action_index() {
         $data = array(
-            'totalUsers' => DB::table('users')->count()
+            'totalUsers' => DB::table('users')->count(),
+            'name' => 'test'
         );
-        
+
         return View::make('potato.potato', $data);
     }
 
