@@ -15,7 +15,7 @@ function begin() {
   setEvents(name);
   $.ajax({
     type: "POST",
-    url: "/dbwrite",
+    url: "potato/dbwrite",
     data: name,
     success: function(data) {
       console.log(data);
