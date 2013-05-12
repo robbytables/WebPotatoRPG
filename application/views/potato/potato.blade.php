@@ -2,6 +2,7 @@
 
 @section('content')
     <h1>latvia dream of potato</h1>
+    <h2>There are currently: {{ $data.totalUsers }} users</h2>
     <button id="startButton" type="button" onclick="begin()" style="display:block;">start</button>
     <button type="button" onclick="getEvent()" style="display:none;">get event</button>
     <div id="game">
