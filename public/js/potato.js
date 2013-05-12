@@ -18,9 +18,9 @@ function begin() {
         url: "potato/dbwrite",
         data: {_name: name}
     }).done(function(data) {
-        console.log('wat' + data);
+        console.log(data);
     }).fail(function(status) {
-        console.log("error" + status);
+        console.log(JSON.stringify(status));
     });
 
     usedEvents = [];
