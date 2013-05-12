@@ -31,17 +31,18 @@ class Potato_Controller extends Base_Controller {
 
     public function action_index() {
         $count = DB::table('users')->count();
+
+        return View::make('potato.potato');
+    }
+
+    public function action_test() {
         $fart = "what";
         $data = array(
             'totalUsers' => $count,
             'name' => $fart
         );
 
-        return View::make('potato.potato', $data);
-    }
-
-    public function action_test() {
-        return "Hello Potato Person Latvia whatever!";
+        return View::make('potato.potato');
     }
 
     public function action_dbtest() {
