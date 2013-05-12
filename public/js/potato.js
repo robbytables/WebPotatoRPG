@@ -11,6 +11,9 @@ var usedEvents;
 
 function begin() {
     name = prompt("what is name");
+	if (!name || 0 === str.length) {
+      name = "latvian";
+	}
     hp = 6;
     setEvents(name);
     $.ajax({
@@ -22,7 +25,6 @@ function begin() {
     }).fail(function(status) {
         console.log(JSON.stringify(status));
     });
-
     usedEvents = [];
     document.getElementById("name").innerHTML = "name: " + name;
     document.getElementById("startButton").style.display = "none";
