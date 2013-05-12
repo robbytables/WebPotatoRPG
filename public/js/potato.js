@@ -16,7 +16,7 @@ function begin() {
   $.ajax({
     type: "POST",
     url: "potato/dbwrite",
-    data: name,
+    data: {_name: name},
     success: function(data) {
       console.log(data);
     },
