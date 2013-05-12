@@ -1,2 +1,4 @@
 /nbproject/private/
 *.pem
+/application/config/application.php
+/application/config/database.php
