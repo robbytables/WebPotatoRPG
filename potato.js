@@ -11,7 +11,6 @@ var usedEvents;
 
 function begin() {
   name = prompt("what is name");
-  console.log(name);
   hp = 6;
   setEvents(name);
   usedEvents = [];
@@ -23,8 +22,6 @@ function begin() {
 }
 
 function setEvents(name) {
-    console.log("fart");
-    console.log(name);
   eventArray = ["is cold. see potato. actually hallucinate.",
                 "no bread. eat snow. so cold.",
                 "politburo shoot dog. joke on him, was son. suffer is over.",
