@@ -34,13 +34,13 @@ class Potato_Controller extends Base_Controller {
 	{
 		return View::make('potato.potato');
 	}
-
+/*
         public function action_test()
 	{
 		return "Hello Potato Person Latvia whatever!";
 	}
 
-/*
+
 	public function action_dbtest()
 	{
 		$user = DB::table('users')->first();
