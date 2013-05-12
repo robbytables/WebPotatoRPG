@@ -40,13 +40,13 @@ class Potato_Controller extends Base_Controller {
 		return "Hello Potato Person Latvia whatever!";
 	}
 
-/*
+
 	public function action_dbtest()
 	{
 		$user = DB::table('users')->first();
 		echo var_dump($user);
 	}
-
+/*
 	public function action_dbwrite($username)
 	{
 		$id = DB::table('users')->insert_get_id(array('username' => $username));
