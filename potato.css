@@ -36,7 +36,8 @@ margin: 0 auto;
 #eventText {
   width: 496px;
   margin-top: 128px;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #choiceOne, #choiceTwo, #choiceThree {
