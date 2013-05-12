@@ -72,7 +72,7 @@ return array(
 			'host'     => '127.0.0.1',
 			'database' => 'potatorpg',
 			'username' => 'root',
-			'password' => 'potato',
+			'password' => '',
 			'charset'  => 'utf8',
 			'prefix'   => '',
 		),
