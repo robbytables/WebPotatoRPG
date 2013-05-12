@@ -49,8 +49,8 @@ class Potato_Controller extends Base_Controller {
 
 	public function action_dbwrite()
 	{
-                $input = Input::get('_name');
-		$id = DB::table('users')->insert_get_id(array('username' => $input));
+                $username = Input::get('_name');
+		$id = DB::table('users')->insert_get_id(array('username' => $username));
                 return Response::json(array('username' => $username, 'id' => $id));
 	}
 
