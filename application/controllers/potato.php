@@ -30,19 +30,15 @@ class Potato_Controller extends Base_Controller {
      */
 
     public function action_index() {
-        $count = DB::table('users')->count();
+        $data = array(
+            'totalUsers' => $count = DB::table('users')->count()
+        );
 
-        return View::make('potato.potato');
+        return View::make('potato.potato')->with('data', $data);
     }
 
     public function action_test() {
-        $fart = "what";
-        $data = array(
-            'totalUsers' => $count,
-            'name' => $fart
-        );
-
-        return View::make('potato.potato');
+        echo "Blank";
     }
 
     public function action_dbtest() {
