@@ -51,8 +51,7 @@ class Potato_Controller extends Base_Controller {
 	{
                 $input = Input::get('_name');
 		$id = DB::table('users')->insert_get_id(array('username' => $input));
-		echo "$input inserted as the $id record";
-                return Response::json(Input::get('_name'));
+                return Response::json(array('username' => $username, 'id' => $id));
 	}
 
 }
