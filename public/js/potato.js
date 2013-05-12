@@ -31,8 +31,12 @@ function setEvents(name) {
                 "hunger is return. poor " + name + ".",
                 "politburo by home. make laugh inside. politburo was inside. sad day.",
                 "you find potato. was decoy by politburo. very sad.",
-                "door knock. is politburo. sad ending for " + name + "."];
-  eventTypes = [1, 1, 2, 3, 2, 2, 1, 3, 3, 3];
+                "door knock. is politburo. sad ending for " + name + ".",
+                "politburo take wife. is okay, more bread for " + name + ".",
+                "dog walk to " + name + ". last dog mistake. dog actually wife. no sad.",
+                "is more cold than hunger? premise ridiculous! all is cold hunger.",
+                "chicken road cross. no humor because malnourish. chicken was dinner."];
+  eventTypes = [1, 1, 2, 3, 2, 2, 1, 3, 3, 3, 3, 2, 1, 1];
   oneChoices = ["dream of potato. end suffer with sleep.",
                 "dig for food. find rock. was delicious.",
                 "hunger is suffer. no end, just cold.",
@@ -43,7 +47,6 @@ function setEvents(name) {
                 "before bury save leg. eat like king for day.",
                 "is okay. no expect not hunger."];
   threeChoices = ["politburo dog. most useful as stew.",
-                  "politburo take wife. is okay, more bread for " + name + ".",
                   "you find potato. was decoy by politburo. very sad.",
                   "succumb to politburo. forget hunger for moment.",
                   "ask forgive. politburo ask \"for what\". you ask for give food.",
