@@ -1,13 +1,13 @@
 var name;
 var hp = 6;
-      
+
 var eventArray;
 var eventTypes;
 var oneChoices;
 var twoChoices;
 var threeChoices;
 var usedEvents;
-      
+
 
 function begin() {
   name = prompt("what is name");
@@ -15,7 +15,7 @@ function begin() {
   setEvents(name);
   $.ajax({
     type: "POST",
-    url: "/dbwrite{name}",
+    url: "/dbwrite",
     data: name,
     success: function(data) {
       console.log(data);
@@ -64,7 +64,7 @@ function setEvents(name) {
                   "ask forgive. politburo ask \"for what\". you ask for give food.",
                   "politburo make day as sad as hunger"];
 }
-      
+
 function getEvent() {
   hp--;
   document.getElementById("hp").innerHTML="hp: " + hp;
@@ -93,7 +93,7 @@ function uniqueIndex(ind) {
   usedEvents.push(ind);
   return ind;
 }
-      
+
 function setChoices(ind) {
   if (ind==1) {
       pickUnique(oneChoices, 3);
@@ -103,12 +103,12 @@ function setChoices(ind) {
       pickUnique(threeChoices, 3);
   }
 }
-      
+
 function pickUnique (choices, num) {
   var one = -1;
   var two = -1;
   var three = -1;
-        
+
   if (num > 2) {
     while (one == two || two == three || one == three) {
       one = parseInt(Math.random()*num,10);

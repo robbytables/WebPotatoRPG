@@ -46,11 +46,13 @@ class Potato_Controller extends Base_Controller {
 		$user = DB::table('users')->first();
 		echo var_dump($user);
 	}
-	
-	public function action_dbwrite($username)
+
+	public function action_dbwrite()
 	{
+                $username = Input::get('name');
+                echo "$username TEST TEST ";
 		$id = DB::table('users')->insert_get_id(array('username' => $username));
 		echo "$username inserted as the $id record";
 	}
-	
+
 }
