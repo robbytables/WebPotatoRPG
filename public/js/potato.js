@@ -13,6 +13,18 @@ function begin() {
   name = prompt("what is name");
   hp = 6;
   setEvents(name);
+  $.ajax({
+    type: "POST",
+    url: /dbwrite{name},
+    data: name,
+    success: function(data) {
+      console.log(data);
+    },
+    error: function(xhr, status) {
+      console.log(status);
+    }
+  });
+
   usedEvents = [];
   document.getElementById("name").innerHTML="name: " + name;
   document.getElementById("startButton").style.display = "none";
