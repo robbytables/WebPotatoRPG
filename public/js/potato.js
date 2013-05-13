@@ -11,7 +11,7 @@ var usedEvents;
 
 function begin() {
     name = prompt("what is name");
-    if (name == null || name == undefined || name == "") {
+    if (name == null || name == undefined || name == "" || name == "null") {
       name = "latvian";
     }
     hp = 6;
