@@ -2,7 +2,6 @@
 
 @section('content')
     <h1>latvia dream of potato</h1>
-    <h2>{{ $data['totalUsers'] }} Latvian's have try dream</h2>
     <button id="startButton" type="button" onclick="begin()" style="display:block;">start</button>
     <button type="button" onclick="getEvent()" style="display:none;">get event</button>
     <div id="game">
@@ -13,5 +12,6 @@
       <button id="choiceTwo" onclick="getEvent()" style="display:none;"></button>
       <button id="choiceThree" onclick="getEvent()" style="display:none;"></button>
     </div>
-    <div id="copyright">Chris Germano 2013</div>
+    <h2>{{ $data['totalUsers'] }} Latvians have try dream</h2>
+    <a id="copyright" href="https://twitter.com/chris_germano">Chris Germano 2013</a>
 @endsection

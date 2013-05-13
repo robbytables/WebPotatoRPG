@@ -20,10 +20,10 @@ margin: 0 auto;
 }
 
 #name {
-  float: left;
   font-weight: bold;
   margin-top: 16px;
-  margin-left: 128px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #hp {
@@ -46,8 +46,9 @@ margin: 0 auto;
   margin-right: auto;
 }
 
-#copyright {
+#copyright, #copyright:hover {
   position: absolute;
   right: 16px;
   bottom: 16px;
+  text-decoration:none;
 }
