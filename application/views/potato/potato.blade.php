@@ -13,5 +13,5 @@
       <button id="choiceThree" onclick="getEvent()" style="display:none;"></button>
     </div>
     <h2>{{ $data['totalUsers'] }} Latvians have try dream</h2>
-    <div id="copyright">Chris Germano 2013</div>
+    <a id="copyright" href="https://twitter.com/chris_germano">Chris Germano 2013</a>
 @endsection
