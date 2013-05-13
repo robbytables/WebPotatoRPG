@@ -11,9 +11,9 @@ var usedEvents;
 
 function begin() {
     name = prompt("what is name");
-	if (!name || 0 === str.length) {
+    if (name == null || name == undefined) {
       name = "latvian";
-	}
+    }
     hp = 6;
     setEvents(name);
     $.ajax({
