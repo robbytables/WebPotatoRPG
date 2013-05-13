@@ -11,7 +11,7 @@ var usedEvents;
 
 function begin() {
     name = prompt("what is name");
-	if (!name || 0 === str.length) {
+	if (!name || 0 === name.length) {
       name = "latvian";
 	}
     hp = 6;
