@@ -37,9 +37,9 @@ class Potato_Controller extends Base_Controller {
         return View::make('potato.potato')->with('data', $data);
     }
 
-//    public function action_test() {
-//        echo "Blank";
-//    }
+    public function action_test() {
+        echo "Blank";
+    }
 
     public function action_dbtest() {
         $user = DB::table('users')->first();
