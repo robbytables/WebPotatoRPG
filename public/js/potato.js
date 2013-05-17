@@ -7,6 +7,7 @@ var oneChoices;
 var twoChoices;
 var threeChoices;
 var usedEvents;
+var potatoGet = "is not hallucen? is.. is mighty potato! glory day for Latvia!";
 
 
 function begin() {
@@ -49,6 +50,7 @@ function setEvents(name) {
         "is more cold than hunger? premise ridiculous! all is cold hunger.",
         "chicken road cross. no humor because malnourish. chicken was dinner."];
     eventTypes = [1, 1, 2, 3, 2, 2, 1, 3, 3, 3, 3, 2, 1, 1];
+	potatoChoices = ["is overwhelm by glorious potato!"];
     oneChoices = ["dream of potato. end suffer with sleep.",
         "dig for food. find rock. was delicious.",
         "hunger is suffer. no end, just cold.",
@@ -77,11 +79,18 @@ function getEvent() {
         document.getElementById("startButton").style.display = "block";
         document.getElementById("hp").style.display = "none";
     } else {
-        var index = uniqueIndex(parseInt(Math.random() * (eventArray.length - 1)));
-        var newEvent = eventArray[index];
-        var eventType = eventTypes[index];
-        document.getElementById("eventText").innerHTML = newEvent;
-        setChoices(eventType);
+	    var potatoChance = parseInt(Math.random() * 100);
+		if (potatoChance == 42) {
+		    hp += 10;
+			document.getElementById("eventText").innerHTML = potatoGet;
+		    setChoices(0);
+		} else {
+			var index = uniqueIndex(parseInt(Math.random() * (eventArray.length - 1)));
+			var newEvent = eventArray[index];
+			var eventType = eventTypes[index];
+			document.getElementById("eventText").innerHTML = newEvent;
+			setChoices(eventType);
+		}
     }
 }
 
@@ -101,7 +110,9 @@ function setChoices(ind) {
         pickUnique(twoChoices, 3);
     } else if (ind == 3) {
         pickUnique(threeChoices, 3);
-    }
+    } else if (ind == 0) {
+	    pickUnique(potatoChoices, 1);
+	}
 }
 
 function pickUnique(choices, num) {
@@ -111,9 +122,9 @@ function pickUnique(choices, num) {
 
     if (num > 2) {
         while (one == two || two == three || one == three) {
-            one = parseInt(Math.random() * num, 10);
-            two = parseInt(Math.random() * num, 10);
-            three = parseInt(Math.random() * num, 10);
+            one = parseInt(Math.random() * choices.length, 10);
+            two = parseInt(Math.random() * choices.length, 10);
+            three = parseInt(Math.random() * choices.length, 10);
         }
         document.getElementById("choiceOne").style.display = "block";
         document.getElementById("choiceTwo").style.display = "block";
@@ -123,8 +134,8 @@ function pickUnique(choices, num) {
         document.getElementById("choiceThree").innerHTML = choices[three];
     } else if (num > 1) {
         while (one == two) {
-            one = parseInt(Math.random() * num, 10);
-            two = parseInt(Math.random() * num, 10);
+            one = parseInt(Math.random() * choices.length, 10);
+            two = parseInt(Math.random() * choices.length, 10);
         }
         document.getElementById("choiceOne").style.display = "block";
         document.getElementById("choiceTwo").style.display = "block";
@@ -132,7 +143,7 @@ function pickUnique(choices, num) {
         document.getElementById("choiceOne").innerHTML = choices[one];
         document.getElementById("choiceTwo").innerHTML = choices[two];
     } else {
-        one = parseInt(Math.random() * num, 10);
+        one = parseInt(Math.random() * choices.length, 10);
         document.getElementById("choiceOne").style.display = "block";
         document.getElementById("choiceTwo").style.display = "none";
         document.getElementById("choiceThree").style.display = "none";
