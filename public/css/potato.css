@@ -20,10 +20,11 @@ margin: 0 auto;
 }
 
 #name {
+  float: right;
   font-weight: bold;
   margin-top: 16px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 128px;
+  
 }
 
 #hp {

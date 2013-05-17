@@ -71,6 +71,8 @@ function getEvent() {
     hp--;
     document.getElementById("hp").innerHTML = "hp: " + hp;
     if (hp <= 0) {
+	    document.getElementById("name").style.marginLeft = "auto";
+	    document.getElementById("name").style.marginRight = "auto";
         document.getElementById("name").innerHTML = name + "'s suffer is over";
         document.getElementById("choiceOne").style.display = "none";
         document.getElementById("choiceTwo").style.display = "none";
