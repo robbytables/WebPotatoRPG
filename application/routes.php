@@ -39,6 +39,8 @@ Route::get('/', function()
 
 Route::controller('potato');
 
+Route::controller('mta');
+
 /*
 |--------------------------------------------------------------------------
 | Application 404 & 500 Error Handlers

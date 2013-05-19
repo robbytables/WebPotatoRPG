@@ -1,7 +1,7 @@
 <?php
 
 class Potato_Controller extends Base_Controller {
-	 /*
+    /*
       |--------------------------------------------------------------------------
       | The Default Controller
       |--------------------------------------------------------------------------
@@ -46,14 +46,14 @@ class Potato_Controller extends Base_Controller {
         $id = DB::table('users')->insert_get_id(array('username' => $username));
         return Response::json(array('username' => $username, 'id' => $id));
     }
-	
-	public function action_dbwriteAge() {
-		$age = Input::get("_age");
-		$id = Input::get("_id");
-		DB::table('users')
-			->where('id', '=', $id)
-			->update(array('age' => $age));
-		return Response::make('Age set', 200);
-	}
+
+    public function action_dbwriteAge() {
+        $age = Input::get("_age");
+        $id = Input::get("_id");
+        DB::table('users')
+                ->where('id', '=', $id)
+                ->update(array('age' => $age));
+        return Response::make('Age set', 200);
+    }
 
 }
