@@ -24,6 +24,7 @@ function begin() {
         url: "potato/dbwrite",
         data: {_name: name}
     }).done(function(data) {
+		sessionStorage.userId = data.id;
         console.log(data);
     }).fail(function(status) {
         console.log(JSON.stringify(status));
@@ -92,7 +93,7 @@ function getEvent() {
 		$.ajax({
 			type: "POST",
 			url: "potato/dbwriteAge",
-			data: {_name: name, _age: age}
+			data: {_id: sessionStorage.userId, _age: age}
 		}).done(function(data) {
 			console.log(data);
 		}).fail(function(status) {
