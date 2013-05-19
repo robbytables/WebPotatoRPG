@@ -50,7 +50,7 @@ class Potato_Controller extends Base_Controller {
 	public function action_dbwriteAge() {
 		$age = Input::get("_age");
 		$name = Input::get("_name");
-		$id = DB::table('users')
+		DB::table('users')
 			->where('username', '=', $name)
 			->update(array('age' => $age));
 		return Response::make('Age set', 200, array());
