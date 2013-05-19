@@ -8,6 +8,8 @@
 	<meta name="author" content="">
 	{{ HTML::style('css/mta.css') }}
 	{{ HTML::script('http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js') }}
+        {{ HTML::script('js/jquery/moment.min.js') }}
+        {{ HTML::script('js/jquery/livestamp.min.js') }}
 	{{ HTML::script('js/mta.js') }}
 </head>
 <body>

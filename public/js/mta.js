@@ -1,6 +1,5 @@
-/* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+$(document).ready(function() {
 
+//    $('h3').text(moment(parseInt($('h3').attr('title'))).format('h:mm:ssa'));
 
+});
