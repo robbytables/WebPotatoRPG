@@ -82,8 +82,10 @@ function setEvents(name) {
 
 function getEvent() {
 	age++;
-    hp--;
-    document.getElementById("hp").innerHTML = "hp: " + hp;
+	if (parseInt(Math.random() * 10) < 8) {
+		hp--;
+    }
+	document.getElementById("hp").innerHTML = "hp: " + hp;
     if (hp <= 0) {
 	    document.getElementById("name").style.marginLeft = "auto";
 	    document.getElementById("name").style.marginRight = "auto";
