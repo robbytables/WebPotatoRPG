@@ -7,14 +7,11 @@ class MTA_Controller extends Base_Controller {
 
         File::put('public/data/mta.txt', $mta);
 
-         // protoc -I tmp/ tmp/nyct-subway.proto --decode=transit_realtime.FeedMessage > tmp/decodedmtafeed2
-
         $parsedMta = shell_exec('cat public/data/mta.txt | protoc -I public/data/mapping/proto public/data/mapping/proto/nyct-subway.proto --decode=transit_realtime.FeedMessage');
 
-
-        echo $parsedMta;
-
-        File::put('public/data/mtaparsed.txt', $parsedMta);
+        if ($parsedMta != ""){
+            File::put('public/data/mtaparsed.txt', $parsedMta);
+        }
 
         return View::make('mta.index');
     }
