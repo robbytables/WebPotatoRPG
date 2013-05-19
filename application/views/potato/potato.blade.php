@@ -6,6 +6,7 @@
     <button type="button" onclick="getEvent()" style="display:none;">get event</button>
     <div id="game">
       <div id="name"></div>
+	  <div id="age"></div>
       <div id="hp"></div>
       <div id="eventText"></div>
       <button id="choiceOne" onclick="getEvent()" style="display:none;"></button>

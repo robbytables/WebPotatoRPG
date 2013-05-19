@@ -1,5 +1,6 @@
 var name;
 var hp = 6;
+var age = 0;
 
 var eventArray;
 var eventTypes;
@@ -11,11 +12,23 @@ var potatoGet = "is not hallucen? is.. is mighty potato! glory day for Latvia!";
 
 
 function begin() {
+	if (age > 0) {
+		$.ajax({
+			type: "POST",
+			url: "potato/dbwriteAge",
+			data: {_name: name, _age: age}
+		}).done(function(data) {
+			console.log(data);
+		}).fail(function(status) {
+			console.log(JSON.stringify(status));
+		});
+	}
     name = prompt("what is name");
     if (name == null || name == undefined || name == "" || name == "null") {
       name = "latvian";
     }
     hp = 6;
+	age = 0;
     setEvents(name);
     $.ajax({
         type: "POST",
@@ -68,6 +81,7 @@ function setEvents(name) {
 }
 
 function getEvent() {
+	age++;
     hp--;
     document.getElementById("hp").innerHTML = "hp: " + hp;
     if (hp <= 0) {

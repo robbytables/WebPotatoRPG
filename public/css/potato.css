@@ -20,18 +20,18 @@ margin: 0 auto;
 }
 
 #name {
-  float: right;
+  float: left;
   font-weight: bold;
   margin-top: 16px;
   margin-left: 128px;
   
 }
 
-#hp {
-  float: right;
+#hp, #age {
+  float: left;
   font-weight: bold;
   margin-top: 16px;
-  margin-right: 128px;
+  margin-left: 16px;
 }
 
 #eventText {

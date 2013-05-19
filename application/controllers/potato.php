@@ -37,10 +37,6 @@ class Potato_Controller extends Base_Controller {
         return View::make('potato.potato')->with('data', $data);
     }
 
-//    public function action_test() {
-//        echo "Blank";
-//    }
-
     public function action_dbtest() {
         $user = DB::table('users')->first();
         echo var_dump($user);
@@ -51,5 +47,12 @@ class Potato_Controller extends Base_Controller {
         $id = DB::table('users')->insert_get_id(array('username' => $username));
         return Response::json(array('username' => $username, 'id' => $id));
     }
+	
+	public function action_dbwriteAge() {
+		$age = Input::get("_age");
+		$name = Input::get("_name");
+		$id = DB::table('users')->query('UPDATE users SET age=' + $age + ' WHERE username=\"' + $name + '\"');
+		return Response::json(array('username' => $name, 'age' => $age, 'id' => $id));
+	}
 
 }
