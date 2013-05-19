@@ -51,8 +51,8 @@ class Potato_Controller extends Base_Controller {
 		$age = Input::get("_age");
 		$id = Input::get("_id");
 		DB::table('users')
-			->where('username', '=', $name)
-			->update(array('id' => $id));
+			->where('id', '=', $id)
+			->update(array('age' => $age));
 		return Response::make('Age set', 200);
 	}
 

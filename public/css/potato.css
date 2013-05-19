@@ -23,15 +23,18 @@ margin: 0 auto;
   float: left;
   font-weight: bold;
   margin-top: 16px;
-  margin-left: 128px;
-  
+  width: 171px;
 }
 
 #hp, #age {
   float: left;
   font-weight: bold;
   margin-top: 16px;
-  margin-left: 16px;
+  width: 171px;
+}
+
+#header {
+  text-align: center;
 }
 
 #eventText {

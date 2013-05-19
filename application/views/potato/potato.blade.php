@@ -5,9 +5,11 @@
     <button id="startButton" type="button" onclick="begin()" style="display:block;">start</button>
     <button type="button" onclick="getEvent()" style="display:none;">get event</button>
     <div id="game">
-      <div id="name"></div>
-	  <div id="age"></div>
-      <div id="hp"></div>
+	  <div id="header">
+        <div id="name"></div>
+	    <div id="age"></div>
+        <div id="hp"></div>
+	  </div>
       <div id="eventText"></div>
       <button id="choiceOne" onclick="getEvent()" style="display:none;"></button>
       <button id="choiceTwo" onclick="getEvent()" style="display:none;"></button>
