@@ -11,6 +11,8 @@ class MTA_Controller extends Base_Controller {
 
         $parsedMta = shell_exec('cat public/data/'.$mta.'.txt | protoc -I public/data/mapping public/data/mapping/nyct-subway.proto --decode=transit_realtime.FeedMessage');
 
+        echo $parsedMta;
+
         File::put('public/data/mtaparsed.txt', $parsedMta);
 
         return View::make('mta.index');
