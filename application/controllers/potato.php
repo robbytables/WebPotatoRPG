@@ -53,7 +53,7 @@ class Potato_Controller extends Base_Controller {
 		DB::table('users')
 			->where('username', '=', $name)
 			->update(array('age' => $age));
-		return Response::make('Age set', 200, array());
+		return Response::make('Age set', 200);
 	}
 
 }
