@@ -12,14 +12,14 @@ class MTA_Controller extends Base_Controller {
 
         if ($unparsedMta != ""){
             // File::put('public/data/mtaparsed.txt', $parsedMta);
-            preg_match('/(\d{10})/', $parsedMta, $time);
+            // preg_match('/(\d{10})/', $parsedMta, $time);
             // preg_match('/arrival(.*)stop_id:(\s+)"122N"/', $parsedMta, $station);
             // preg_match_all('#arrival(\.+)stop_id#', $parsedMta, $station);
             $unparsedMta = File::get('public/data/mta.txt');
             $curTime = MTAInfo::decode($unparsedMta);
 
             $data = array(
-                'currentTime' => $time[0]
+                'currentTime' => $cutTime
             );
         }
 
