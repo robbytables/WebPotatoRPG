@@ -60,6 +60,7 @@ Laravel\Autoloader::$aliases = $aliases;
 
 Autoloader::map(array(
 	'Base_Controller' => path('app').'controllers/base.php',
+        'MTAInfo' => path('app').'libraries\MTAInfo\MTAInfo.php'
 ));
 
 /*
