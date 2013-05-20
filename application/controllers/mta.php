@@ -19,7 +19,7 @@ class MTA_Controller extends Base_Controller {
             $curTime = MTAInfo::decode($unparsedMta);
 
             $data = array(
-                'currentTime' => $cutTime
+                'currentTime' => $curTime
             );
         }
 
