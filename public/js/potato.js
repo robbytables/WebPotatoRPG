@@ -117,7 +117,9 @@ $(document).ready(function() {
 		}
 	}
 
-	$("#choiceOne", "#choiceTwo", "#choiceThree").click(getChoices(););
+	$("#choiceOne", "#choiceTwo", "#choiceThree").click(function() {
+		getChoices();
+	});
 
 	function uniqueIndex(ind) {
 		for (var i = 0; i < usedEvents.length; i++) {
