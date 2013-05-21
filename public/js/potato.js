@@ -172,7 +172,7 @@ function pickUnique(choices, num) {
     }
 }
 
-$(document).on("click", "#ageChart", function() {
+$(document).on("click", "#chartToggle", function() {
 	if ($("#ageChart").width() == 130) {
 		$("#moveMe").width(230);
 	} else {
