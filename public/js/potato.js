@@ -13,7 +13,7 @@ $(document).ready(function() {
 	var potatoGet = "is not hallucen? is.. is mighty potato! glory day for Latvia!";
 
 
-	function begin() {
+	$("#chartToggle").click(function() {
 		name = prompt("what is name");
 		if (name == null || name == undefined || name == "" || name == "null") {
 		  name = "latvian";
@@ -39,8 +39,8 @@ $(document).ready(function() {
 		document.getElementById("eventText").style.display = "block";
 		document.getElementById("hp").style.display = "block";
 		document.getElementById("age").style.display = "block";
-		getEvent();
-	}
+		$("#choiceOne").trigger("click");
+	});
 
 	function setEvents(name) {
 		eventArray = ["is cold. see potato. actually hallucinate.",
@@ -75,7 +75,7 @@ $(document).ready(function() {
 			"politburo make day as sad as hunger"];
 	}
 
-	function getEvent() {
+	$("#choiceOne", "#choiceTwo", "#choiceThree").click(function() {
 		age++;
 		if (parseInt(Math.random() * 10) < 8) {
 			hp--;
@@ -115,7 +115,7 @@ $(document).ready(function() {
 				setChoices(eventType);
 			}
 		}
-	}
+	});
 
 	function uniqueIndex(ind) {
 		for (var i = 0; i < usedEvents.length; i++) {

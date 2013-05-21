@@ -2,8 +2,7 @@
 
 @section('content')
     <h1>latvia dream of potato</h1>
-    <button id="startButton" type="button" onclick="begin()" style="display:block;">start</button>
-    <button type="button" onclick="getEvent()" style="display:none;">get event</button>
+    <button id="startButton" type="button" style="display:block;">start</button>
     <div id="game">
 	  <div id="header">
         <div id="name"></div>
@@ -11,9 +10,9 @@
         <div id="hp"></div>
 	  </div>
       <div id="eventText"></div>
-      <button id="choiceOne" onclick="getEvent()" style="display:none;"></button>
-      <button id="choiceTwo" onclick="getEvent()" style="display:none;"></button>
-      <button id="choiceThree" onclick="getEvent()" style="display:none;"></button>
+      <button id="choiceOne" style="display:none;"></button>
+      <button id="choiceTwo"style="display:none;"></button>
+      <button id="choiceThree" style="display:none;"></button>
     </div>
 	<div id="ageChart">
 		<div id="chartToggle">O</div>
