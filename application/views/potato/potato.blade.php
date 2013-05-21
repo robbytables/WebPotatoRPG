@@ -16,6 +16,7 @@
       <button id="choiceThree" onclick="getEvent()" style="display:none;"></button>
     </div>
 	<div id="ageChart">
+		<div id="chartToggle">O</div>
 		<p id="topTen">
 			#1 {{ $data['topAges'][0] }} </br>
 			#2 {{ $data['topAges'][1] }} </br>

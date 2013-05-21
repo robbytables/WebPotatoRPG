@@ -5,6 +5,7 @@
 .container {
 overflow: hidden;
 text-align: center;
+position: relative;
 }
 
 #startButton {
@@ -60,7 +61,7 @@ margin: 0 auto;
 #ageChart {
 	position: absolute;
 	top: 280px;
-	left: -100px;
+	left: -110px;
 	width: 130px;
 	height: 512px;
 }
