@@ -43,7 +43,7 @@ class Potato_Controller extends Base_Controller {
 		
         $data = array(
             'totalUsers' => $count = DB::table('users')->count(),
-			'topAges' => $topTen;
+			'topAges' => $topTen
         );
 
         return View::make('potato.potato')->with('data', $data);
