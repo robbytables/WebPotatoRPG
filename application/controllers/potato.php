@@ -1,50 +1,22 @@
 <?php
 
 class Potato_Controller extends Base_Controller {
-    /*
-      |--------------------------------------------------------------------------
-      | The Default Controller
-      |--------------------------------------------------------------------------
-      |
-      | Instead of using RESTful routes and anonymous functions, you might wish
-      | to use controllers to organize your application API. You'll love them.
-      |
-      | This controller responds to URIs beginning with "home", and it also
-      | serves as the default controller for the application, meaning it
-      | handles requests to the root of the application.
-      |
-      | You can respond to GET requests to "/home/profile" like so:
-      |
-      |		public function action_profile()
-      |		{
-      |			return "This is your profile!";
-      |		}
-      |
-      | Any extra segments are passed to the method as parameters:
-      |
-      |		public function action_profile($id)
-      |		{
-      |			return "This is the profile for user {$id}.";
-      |		}
-      |
-     */
 
     public function action_index() {
-	
-		$ages = DB::table('users')
-					->take(10)
-					->order_by('age','desc')
-					->get();
+        $ages = DB::table('users')
+	    ->take(10)
+	    ->order_by('age','desc')
+	    ->get();
 		
-		$topTen = array();
+        $topTen = array();
 		
-		foreach ($ages as $age) {
-			$topTen[] = strval($age->username) . ", age " . strval($age->age);
-		}
+	foreach ($ages as $age) {
+	    $topTen[] = strval($age->username) . ", age " . strval($age->age);
+	}
 		
         $data = array(
             'totalUsers' => $count = DB::table('users')->count(),
-			'topAges' => $topTen
+	        'topAges' => $topTen
         );
 
         return View::make('potato.potato')->with('data', $data);
@@ -67,6 +39,31 @@ class Potato_Controller extends Base_Controller {
             ->where('id', '=', $id)
             ->update(array('age' => $age));
         return Response::make('Age set', 200);
+    }
+
+    public function action_dbgetevent() {
+        $name = Input::get("_name");
+        $eventNum = DB::table('events')->count();
+	srand();
+	$event = DB::table('events')
+	    ->where('id', '=', rand(1, $eventNum))
+	    ->get();
+	return Response::json(array('event' => $event));
+    }
+
+    public function action_dbLoadChoices() {
+        $ones = DB::table('choices')
+	    ->where('type', '=', 1);
+	    ->get();
+	$twos = DB::table('choices')
+	    ->where('type', '=', 2);
+	    ->get();
+	$threes = DB::table('choices')
+	    ->where('type', '=', 3);
+	    ->get();
+
+	return Response::json(array('ones' => $ones, 'twos' => $twos, 'threes' => $threes));
+
     }
 
 }
