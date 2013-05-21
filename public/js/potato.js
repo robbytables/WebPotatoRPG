@@ -33,14 +33,13 @@ $(document).ready(function() {
 			url: "potato/dbloadchoices",
 			data: {_name: name}
 		}).done(function(data) {
+			$oneChoices = $ones;
+			$twoChoices = $twos;
+			$threeChoices = $threes;
 			console.log(data);
 		}).fail(function(status) {
 			console.log(JSON.stringify(status));
 		});
-
-		$oneChoices = $ones;
-		$twoChoices = $twos;
-		$threeChoices = $threes;
 
 		document.getElementById("name").innerHTML = "name: " + name;
 		document.getElementById("hp").innerHTML = "hp: " + hp;
