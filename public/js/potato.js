@@ -13,7 +13,7 @@ $(document).ready(function() {
 	var potatoGet = "is not hallucen? is.. is mighty potato! glory day for Latvia!";
 
 
-	$("#chartToggle").click(function() {
+	$("#startButton").click(function() {
 		name = prompt("what is name");
 		if (name == null || name == undefined || name == "" || name == "null") {
 		  name = "latvian";
