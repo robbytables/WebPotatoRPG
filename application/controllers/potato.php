@@ -42,7 +42,7 @@ class Potato_Controller extends Base_Controller {
 		}
 		
         $data = array(
-            'totalUsers' => $count = DB::table('users')->count()
+            'totalUsers' => $count = DB::table('users')->count(),
 			'topAges' => $topTen;
         );
 
