@@ -23,14 +23,12 @@ overflow: hidden;
 #name {
   font-weight: bold;
   margin-top: 16px;
-  width: 171px;
 }
 
 #hp, #age {
   height: 10px;
   font-weight: bold;
   margin-top: 16px;
-  width: 171px;
 }
 
 #header {
@@ -39,7 +37,7 @@ overflow: hidden;
 
 #eventText {
   width: 496px;
-  margin-top: 128px;
+  margin-top: 64px;
   margin-left: auto;
   margin-right: auto;
 }
