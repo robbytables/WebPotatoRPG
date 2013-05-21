@@ -39,7 +39,7 @@ $(document).ready(function() {
 		document.getElementById("eventText").style.display = "block";
 		document.getElementById("hp").style.display = "block";
 		document.getElementById("age").style.display = "block";
-		$("#choiceOne").trigger("click");
+		getChoices();
 	});
 
 	function setEvents(name) {
