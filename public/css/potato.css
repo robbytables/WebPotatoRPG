@@ -56,3 +56,30 @@ margin: 0 auto;
   bottom: 16px;
   text-decoration:none;
 }
+
+#ageChart {
+	position: absolute;
+	top: 280px;
+	left: -100px;
+	width: 130px;
+	height: 512px;
+}
+
+#chartToggle {
+	position: relative;
+	float: right;
+	width: 20px;
+	height: 20px;
+}
+
+#topTen {
+	text-align: center;
+	position: relative;
+	float: right;
+	margin-right: 20px;
+	font-size: 10px;
+	color #000;
+	width: 75px;
+	height: 512px;
+	overflow: hidden;
+}

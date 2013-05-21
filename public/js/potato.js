@@ -171,3 +171,11 @@ function pickUnique(choices, num) {
         document.getElementById("choiceOne").innerHTML = choices[one];
     }
 }
+
+$(document).on("click", "#ageChart", function() {
+	if ($("#ageChart").width() == 130) {
+		$("#moveMe").width(230);
+	} else {
+		$("#moveMe").width(130);
+	}
+});

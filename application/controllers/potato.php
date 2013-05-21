@@ -30,8 +30,20 @@ class Potato_Controller extends Base_Controller {
      */
 
     public function action_index() {
+	
+		$ages = DB::table('users')
+					->take(10)
+					->order_by('age','desc');
+		
+		$topTen = array();
+		
+		foreach ($ages as $age) {
+			$topTen[] = $age[0] . ", age " . $age[1];
+		}
+		
         $data = array(
             'totalUsers' => $count = DB::table('users')->count()
+			'topAges' => $topTen;
         );
 
         return View::make('potato.potato')->with('data', $data);
@@ -51,8 +63,8 @@ class Potato_Controller extends Base_Controller {
         $age = Input::get("_age");
         $id = Input::get("_id");
         DB::table('users')
-                ->where('id', '=', $id)
-                ->update(array('age' => $age));
+            ->where('id', '=', $id)
+            ->update(array('age' => $age));
         return Response::make('Age set', 200);
     }
 
