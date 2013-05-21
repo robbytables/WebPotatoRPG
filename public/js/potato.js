@@ -75,7 +75,7 @@ $(document).ready(function() {
 			"politburo make day as sad as hunger"];
 	}
 
-	$("#choiceOne", "#choiceTwo", "#choiceThree").click(function() {
+	function getChoices() {
 		age++;
 		if (parseInt(Math.random() * 10) < 8) {
 			hp--;
@@ -115,7 +115,9 @@ $(document).ready(function() {
 				setChoices(eventType);
 			}
 		}
-	});
+	}
+
+	$("#choiceOne", "#choiceTwo", "#choiceThree").click(getChoices(););
 
 	function uniqueIndex(ind) {
 		for (var i = 0; i < usedEvents.length; i++) {
