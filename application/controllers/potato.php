@@ -53,13 +53,13 @@ class Potato_Controller extends Base_Controller {
 
     public function action_dbLoadChoices() {
         $ones = DB::table('choices')
-	    ->where('type', '=', 1);
+	    ->where('type', '=', 1)
 	    ->get();
 	$twos = DB::table('choices')
-	    ->where('type', '=', 2);
+	    ->where('type', '=', 2)
 	    ->get();
 	$threes = DB::table('choices')
-	    ->where('type', '=', 3);
+	    ->where('type', '=', 3)
 	    ->get();
 
 	return Response::json(array('ones' => $ones, 'twos' => $twos, 'threes' => $threes));
