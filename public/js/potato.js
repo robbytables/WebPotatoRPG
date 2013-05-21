@@ -106,8 +106,8 @@ $(document).ready(function() {
 					url: "potato/dbGetEvent",
 					data: {_name: name}
 				}).done(function(data) {
-					console.log(event[1] + " " + name);
-					eventText = event[1].replace("+name+",name);
+					console.log(data[0] + " " + name);
+					eventText = data[0][1].replace("+name+",name);
 					document.getElementById("eventText").innerHTML = eventText;
 					setChoices(data.event[2]);
 					console.log(data);
