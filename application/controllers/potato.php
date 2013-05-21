@@ -39,7 +39,7 @@ class Potato_Controller extends Base_Controller {
 		$topTen = array();
 		
 		foreach ($ages as $age) {
-			$topTen[] = strval($age[1]) . ", age " . strval($age[2]);
+			$topTen[] = strval($age->username) . ", age " . strval($age->age);
 		}
 		
         $data = array(
