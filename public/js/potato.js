@@ -23,7 +23,6 @@ $(document).ready(function() {
 			data: {_name: name}
 		}).done(function(data) {
 			sessionStorage.userId = data.id;
-			console.log(data);
 		}).fail(function(status) {
 			console.log(JSON.stringify(status));
 		});
@@ -111,7 +110,6 @@ $(document).ready(function() {
 					eventText = newEvent.text.replace("+name+",name);
 					document.getElementById("eventText").innerHTML = eventText;
 					setChoices(parseInt(newEvent.type));
-					console.log(data);
 				}).fail(function(status) {
 					console.log(JSON.stringify(status));
 				});
