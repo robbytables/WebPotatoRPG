@@ -33,9 +33,9 @@ $(document).ready(function() {
 			url: "potato/dbloadchoices",
 			data: {_name: name}
 		}).done(function(data) {
-			$oneChoices = $ones;
-			$twoChoices = $twos;
-			$threeChoices = $threes;
+			$oneChoices = data.ones;
+			$twoChoices = data.twos;
+			$threeChoices = data.threes;
 			console.log(data);
 		}).fail(function(status) {
 			console.log(JSON.stringify(status));
