@@ -33,6 +33,7 @@ $(document).ready(function() {
 			url: "potato/dbloadchoices",
 			data: {_name: name}
 		}).done(function(data) {
+			console.log(data.ones);
 			$oneChoices = data.ones;
 			$twoChoices = data.twos;
 			$threeChoices = data.threes;
