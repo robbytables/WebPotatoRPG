@@ -64,7 +64,10 @@ overflow: hidden;
   left: -110px;
   width: 130px;
   height: 512px;
-  transition: width 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
 }
 
 #chartToggle {
