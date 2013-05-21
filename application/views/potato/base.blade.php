@@ -3,7 +3,7 @@
   <head>
 	<meta charset="utf-8">
 	<title>Potato RPG</title>
-	<link rel="icon" type="image/ico" href="../../../public/img/spud.ico"/>
+	<link rel="icon" type="image/ico" href="../../../public/spud.ico"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
