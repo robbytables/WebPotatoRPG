@@ -174,7 +174,7 @@ $(document).ready(function() {
 		}
 	}
 
-	$("#chartToggle").click() (function() {
+	$("#chartToggle").click(function() {
 		if ($("#ageChart").width() == 130) {
 			$("#ageChart").width(230);
 		} else {
