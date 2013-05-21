@@ -107,7 +107,7 @@ $(document).ready(function() {
 					data: {_name: name}
 				}).done(function(data) {
 					console.log(data.event);
-					eventText = data.event[1]replace("+name+",name);
+					eventText = data.event[1].replace("+name+",name);
 					document.getElementById("eventText").innerHTML = eventText;
 					setChoices(data.event[2]);
 					console.log(data);
