@@ -77,6 +77,7 @@ $(document).ready(function() {
 
 	function getChoices() {
 		age++;
+		document.getElementById("age").innerHTML = "age: " + age;
 		if (parseInt(Math.random() * 10) < 8) {
 			hp--;
 			document.getElementById("hp").innerHTML = "hp: " + hp;
