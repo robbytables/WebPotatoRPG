@@ -100,20 +100,19 @@ $(document).ready(function() {
 				document.getElementById("eventText").innerHTML = potatoGet;
 				setChoices(0);
 			} else {
+				var eventText = "";
 				$.ajax({
 					type: "GET",
 					url: "potato/dbGetEvent",
 					data: {_name: name}
 				}).done(function(data) {
+					eventText = data.event[1].replace("+name+",data.name);
+					document.getElementById("eventText").innerHTML = eventText;
+					setChoices(data.event[2]);
 					console.log(data);
 				}).fail(function(status) {
 					console.log(JSON.stringify(status));
 				});
-
-				var eventText = event[1].replace("+name+",name);
-
-				document.getElementById("eventText").innerHTML = eventText;
-				setChoices(event[2]);
 			}
 		}
 	}
