@@ -106,10 +106,10 @@ $(document).ready(function() {
 					url: "potato/dbGetEvent",
 					data: {_name: name}
 				}).done(function(data) {
-					console.log(data.event);
-					eventText = data.event.id.replace("+name+",name);
+					console.log(data.event[0]);
+					eventText = data.event["text"]replace("+name+",name);
 					document.getElementById("eventText").innerHTML = eventText;
-					setChoices(parseInt(data.event.type));
+					setChoices(parseInt(data.event["type"]));
 					console.log(data);
 				}).fail(function(status) {
 					console.log(JSON.stringify(status));
