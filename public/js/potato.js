@@ -39,7 +39,6 @@ $(document).ready(function() {
 		document.getElementById("eventText").style.display = "block";
 		document.getElementById("hp").style.display = "block";
 		document.getElementById("age").style.display = "block";
-		console.log("getting choices");
 		getChoices();
 	});
 
@@ -77,7 +76,6 @@ $(document).ready(function() {
 	}
 
 	function getChoices() {
-		console.log("got choices");
 		age++;
 		if (parseInt(Math.random() * 10) < 8) {
 			hp--;
@@ -119,7 +117,7 @@ $(document).ready(function() {
 		}
 	}
 
-	$("#choiceOne", "#choiceTwo", "#choiceThree").click(function() {
+	$("#choiceOne, #choiceTwo, #choiceThree").click(function() {
 		getChoices();
 	});
 
