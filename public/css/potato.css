@@ -21,14 +21,13 @@ overflow: hidden;
 }
 
 #name {
-  float: left;
   font-weight: bold;
   margin-top: 16px;
   width: 171px;
 }
 
 #hp, #age {
-  float: left;
+  height: 10px;
   font-weight: bold;
   margin-top: 16px;
   width: 171px;
