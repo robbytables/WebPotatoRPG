@@ -33,12 +33,13 @@ class Potato_Controller extends Base_Controller {
 	
 		$ages = DB::table('users')
 					->take(10)
-					->order_by('age','desc');
+					->order_by('age','desc')
+					->get();
 		
 		$topTen = array();
 		
 		foreach ($ages as $age) {
-			$topTen[] = $age[0] . ", age " . $age[1];
+			$topTen[] = $age[1] . ", age " . $age[2];
 		}
 		
         $data = array(
