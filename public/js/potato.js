@@ -17,7 +17,6 @@ $(document).ready(function() {
 		}
 		hp = 6;
 		age = 0;
-		setEvents(name);
 		$.ajax({
 			type: "POST",
 			url: "potato/dbwrite",
